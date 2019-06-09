@@ -20,11 +20,9 @@ print ('A cotação atual do dolar é:', cotacao.group())
 cidade = input("Previsão para qual cidade?: ")
 APIKEY = 'e290bbf2007bd65bf9457bf47ac50fef'
 
-#TODO: Apesar da request estar sendo montada correta n esta ocorrendo retorno, abaixo exemplo de requisicao q vai
-#https://api.openweathermap.org/data/2.5/weather?q=itu&APPID=e290bbf2007bd65bf9457bf47ac50fef
-#doc: https://openweathermap.org/current
+forecast = requests.get('http://api.openweathermap.org/data/2.5/weather?q=' + cidade +'&units=metric&lang=pt' + '&APPID=' + APIKEY)
+retorno = json.loads(forecast.text) 
 
-forecast = requests.get('http://api.openweathermap.org/data/2.5/weather?q=' + cidade + '&appid=' + APIKEY)
-retorno = json.loads(forecast) 
-print(retorno)
+print('Previsão de:', retorno['weather'][0]['description'])
+print('Temperatura de:', retorno['main']['temp'])
 
