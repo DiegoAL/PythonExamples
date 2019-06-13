@@ -1,0 +1,18 @@
+git clone <url> -> make a copy of a repository
+git add <file> -> select files to be commite
+git commit -m "message" -> take a snapshot of the repository and send to server with a log
+git commit -am "message" -> add all files and commit with a message (more effiente than use add after commit)
+git status -> show whats going on your repository
+git push -> send to get hub
+git pull -> Download remote repositorys
+	merge conflicts: everything above to ===== is your code and bellow is remote code 
+git log - > log of all changes
+git reset --hard <hash number> -> restore an old version
+git branch -> list all branchs of the repository
+git branch <nameOfNewRepository> -> create a new branch
+git checkout <branchName> -> start use this branch
+git merge <nameOfTheBranch> -> get informations of a branch and merge to your currently branch
+	with occur error, probable the new brunch doesn't exists in github, than is necessay create:
+	git push --set-upstream orgin <nameOfBranch>
+
+

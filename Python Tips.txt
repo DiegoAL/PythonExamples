@@ -1,0 +1,4 @@
+\n -> quebra de linha
+\t -> tab
+type() -> datatype
+sqlmap -> programa todo feito em python
