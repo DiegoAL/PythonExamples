@@ -6,6 +6,9 @@ git status -> show whats going on your repository
 git push -> send to get hub
 git pull -> Download remote repositorys
 	merge conflicts: everything above to ===== is your code and bellow is remote code 
+or
+	git fetch -> Download a remote repository, but don't merge with local repository
+	git merger origin/master -> Is the complemente of "git fetch", because merge the updates with the new things
 git log - > log of all changes
 git reset --hard <hash number> -> restore an old version
 git branch -> list all branchs of the repository
