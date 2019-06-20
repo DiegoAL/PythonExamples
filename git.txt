@@ -17,5 +17,6 @@ git checkout <branchName> -> start use this branch
 git merge <nameOfTheBranch> -> get informations of a branch and merge to your currently branch
 	with occur error, probable the new brunch doesn't exists in github, than is necessay create:
 	git push --set-upstream orgin <nameOfBranch>
-
+pull request (a github feature) -> is a way to request to owner of the master branch merger your code with the master branch
+	-> in the site select "Compare & pull request"
 
