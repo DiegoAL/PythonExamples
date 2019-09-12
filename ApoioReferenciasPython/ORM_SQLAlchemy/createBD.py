@@ -9,3 +9,6 @@ import sqlite3
 def __init__():
     connect = sqlite3.connect('BancoDeTeste.db')
     connect.close()
+
+if __name__ == '__main_':
+    __init__

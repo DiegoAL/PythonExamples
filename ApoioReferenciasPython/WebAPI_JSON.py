@@ -10,26 +10,21 @@ import json
 #def
 def getInformation(title):
     try:
-        req= requests.get('http://www.omdbapxi.com/?apikey=8015f59e&t=' + title)
+        req= requests.get('http://www.omdbapi.com/?apikey=292834bb&t=' + title)
         dicionario = json.loads(req.text)
-        #TODO: Verificar o retorno das requisicoes para tratar erros
         print(dicionario)#####
         return dicionario
 
     except Exception as err:
         return err
 
-def printInformations(dicionario):
-    #TODO: Como trycatch não funciona pra esse caso validar os retornos e tratar com IFs
-    #if 'Title' in dicionario:
-        
+def printInformations(dicionario):   
         print('Title:', dicionario['Title'])
         print('Released:', dicionario['Released'])
         print('Genre:', dicionario['Genre'])
         print('Actors:', dicionario['Actors'])
         print('IMDB Rating:', dicionario['imdbRating'])
-    #elif:
-        
+
 #logic
 
 print(getInformation('Matrix'))

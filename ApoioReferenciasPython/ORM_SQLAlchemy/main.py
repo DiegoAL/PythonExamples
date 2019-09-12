@@ -11,7 +11,7 @@ from ORM_SQLAlchemy import createBD
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///C:\Users\m206255\eclipse-workspace\PythonExamples\ApoioReferenciasPython\ORM_SQLAlchemy\BancoDeTeste.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///BancoDeTeste.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -25,12 +25,12 @@ class Funcionario (db.Model):
     
 def main():
     
-    createBD
-    
+    createBD.__init__()
+       
     db.create_all()
-    
-    #gravando um dado
-    funcionario = Funcionario(id = 4, nome = 'Diego', cpf = '123')
+
+    #gravando um dado    
+    funcionario = Funcionario(id = 7, nome = 'Diego', cpf = '123')
     db.session.add(funcionario)
     db.session.commit()
     
@@ -39,7 +39,7 @@ def main():
     
     for p in pes:
         print(f'ID: {p.id} | Nome: {p.nome} | CPF: {p.cpf}\n')
-
+    
 @app.route('/')
 def index():
     main()
